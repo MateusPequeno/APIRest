@@ -1,0 +1,50 @@
+GET http://localhost:4000/ HTTP/1.1
+##########################
+POST /linguagens  HTTP/1.1
+Host: localhost:4000
+content-type: application/json
+
+// Inserir dados no DB, não aceita nome e codigo igual
+{
+  "nome" : "zzaz", 
+  "caracteristica" : "objeto,classes,heranca"
+}
+########################
+DELETE /linguagens/:id HTTP/1.1
+Host: localhost:4000
+content-type: application/json
+
+{
+ "_id" :"6051fcb4590caf05b038eac9"
+}
+
+#####################
+GET http://localhost:4000/paradigmas HTTP/1.1
+####################################
+POST /paradigmas  HTTP/1.1
+Host: localhost:4000
+content-type: application/json
+
+// Inserir dados no DB, não aceita nome e codigo igual
+{
+  "nomeParad" : "Zap", 
+  "caracteristica" : "Zipt"
+}
+###############
+PUT /linguagens/:id HTTP/1.1
+Host: localhost:4000
+content-type: application/json
+
+{
+ "_id" :"6051fa3eb7f88c11fc9bdd0f",
+ "nome" : "Python",
+ "caracteristica": "objetos,classes,heranca,funcao"
+}
+##########################
+DELETE /linguagens/:id HTTP/1.1
+Host: localhost:4000
+content-type: application/json
+
+{
+ "_id" :"6051fcb4590caf05b038eac9"
+}
